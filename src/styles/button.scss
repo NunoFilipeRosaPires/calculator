@@ -1,4 +1,11 @@
 .button {
   position: relative;
   z-index: 1;
+  width: calc(25vw - 2rem);
+  max-width: calc(20vh - 5rem);
+  min-width: 0px;
+  border: 0;
+  border-radius: 50%;
+  height: auto;
+  aspect-ratio: 1/1;
 }
