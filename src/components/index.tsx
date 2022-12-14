@@ -1,3 +1,3 @@
 export { Button } from "./Button";
-export { Keybord } from "./Keybord";
+export { Keyboard } from "./Keyboard";
 export { Screen } from "./Screen";

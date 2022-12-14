@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Keybord, Screen } from "./components";
+import { Keyboard, Screen } from "./components";
 
 const App = () => {
   const [value, setValue] = useState<string>("0");
@@ -9,7 +9,7 @@ const App = () => {
       <div className="calculator">
         <h1>CALCULATOR</h1>
         <Screen value={value} />
-        <Keybord />
+        <Keyboard />
       </div>
     </div>
   );
