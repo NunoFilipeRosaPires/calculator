@@ -14,7 +14,7 @@ export const Keyboard = () => {
 const buttons = [
   [
     { name: "AC", type: "special" },
-    { name: faDeleteLeft.prefix, type: "special" },
+    { name: faDeleteLeft, type: "delete" },
     { name: "%", type: "special" },
     { name: "/", type: "count" },
   ],
