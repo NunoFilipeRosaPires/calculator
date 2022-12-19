@@ -1,7 +1,7 @@
-export const Screen = ({ value }: { value: string }) => {
+export const Screen = () => {
   return (
     <div className="screen">
-      <div className="screen-value">{value}</div>
+      <div className="screen-value">0</div>
     </div>
   );
 };
