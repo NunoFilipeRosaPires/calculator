@@ -5,7 +5,8 @@ export const Keyboard = () => {
   return (
     <div className="keyboard background">
       {buttons.flat().map((button, index) => {
-        return <Button key={index} {...button} />;
+        const { name, type } = button;
+        return <Button key={index} name={name} type={type} />;
       })}
     </div>
   );

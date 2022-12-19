@@ -5,20 +5,21 @@ import { ButtonProps } from "./types";
 export const Button = (props: ButtonProps) => {
   const { name, type } = props;
 
+  const handleEvent = (e: any) => {
+    const val = e.type === "click" ? name : e.key;
+    if (type === "delete" && val === "Backspace") console.log(name);
+    else if (type === "equals" && val === "Enter") console.log(name);
+    else if (name === "x" && val === "*") console.log(name);
+    else if (val === name) console.log(name);
+  };
+
   useEffect(() => {
-    const handleEvent = (e: KeyboardEvent) => {
-      if (type === "delete" && e.key === "Backspace") console.log(name);
-      else if (type === "equals" && e.key === "Enter") console.log(name);
-      else if (name === "x" && e.key === "*") console.log(name);
-      else if (name === "x") return;
-      else if (e.key === name) console.log(name);
-    };
     window.addEventListener("keydown", handleEvent);
     return () => window.removeEventListener("keydown", handleEvent);
   }, []);
 
   return (
-    <button className={`button button-${type}`} onClick={() => console.log(name)}>
+    <button className={`button button-${type}`} onClick={handleEvent}>
       {type === "delete" ? <FontAwesomeIcon icon={name} /> : name}
     </button>
   );
